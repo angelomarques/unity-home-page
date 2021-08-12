@@ -1,0 +1,117 @@
+@import "../../styles/variables.scss";
+
+.home {
+  color: $color-dark;
+  padding: 4.8rem 6.4rem 4.4rem;
+
+  header {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 4.8rem;
+
+    p {
+      font-weight: 500;
+      font-size: 2.4rem;
+    }
+
+    h1 {
+      font-size: 600;
+      font-size: 4.8rem;
+    }
+  }
+}
+
+.hero {
+  align-items: center;
+  background: $color-primary;
+  border-radius: 2.4rem;
+  display: flex;
+  margin-bottom: 4rem;
+  padding: 4.3rem 3.2rem 3.2rem;
+  width: 100%;
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div:last-child {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+.heroContent {
+  margin-right: 3.6rem;
+  color: #FFFFFF;
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  p{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  button {
+    background: #FFFFFF;
+    border-radius: 1.6rem;
+    color: $color-dark;
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 5.6rem;
+    width: 16rem;
+  }
+}
+
+.homeContent {
+  display: flex;
+  gap: 3.2rem;
+
+  > div {
+    flex: 1;
+    border-radius: 2.4rem;
+
+    &:first-child {
+      box-shadow: -5px 25px 39px 12px rgba(227, 230, 236, 0.47);
+      height: 39.8rem;
+      padding: 3.2rem 3.2rem 0rem;
+    }
+
+    &:last-child {
+      background-color: $color-purple-light;
+      padding: 3.2rem .8rem .8rem;
+    }
+
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1.8rem;
+      margin-bottom: 3.2rem;
+      margin-left: 2.4rem;
+    }
+  }
+}
+
+.chart {
+  background-color: #FFFFFF;
+  padding: 0rem 0rem 2.4rem 2.4rem;
+  border-radius: 1.6rem;
+
+  img {
+    margin-bottom: 1.8rem;
+  }
+
+  button {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    background-color: $color-primary;
+    padding: 1.8rem 7.2rem;
+    border-radius: 1.6rem;
+  }
+}

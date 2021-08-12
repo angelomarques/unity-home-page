@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.profile {
+  align-items: center;
+  display: flex;
+
+  & > div {
+    padding: 0rem 1.3rem 0rem 1.6rem;
+
+    p {
+      color: $color-dark;
+      margin-bottom: 0.1rem;
+    }
+
+    span {
+      color: $text-light;
+    }
+  }
+}
