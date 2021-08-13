@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "./base.scss";
 
 * {
   box-sizing: border-box;
@@ -14,6 +14,7 @@ a {
 body {
   font-family: "Inter", sans-serif; // 'Poppins';
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 button {
@@ -26,8 +27,46 @@ html {
   font-size: 62.5%;
 }
 
-.app {
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.container {
   display: flex;
+  transition: all 200ms ease-in-out;
+
+  @include breakpoint-down(small) {
+    width: calc(100% + 24.6rem);
+
+    &.active {
+      transform: translateX(-24.6rem);
+    }
+  }
+}
+
+.appContent {
+  display: flex;
+  width: 100%;
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.truncate {
+  a {
+    > span {
+      @include breakpoint-down(large) {
+        width: 6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }
 
 .unreadUpdates {

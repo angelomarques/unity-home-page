@@ -1,6 +1,113 @@
-@import '../../styles/variables.scss';
+@import "../../styles/base.scss";
 
 .sidebar {
-    width: 30%;
-    border-left: 1px solid $color-dark-gray;
+  max-width: 42.6rem;
+  border-left: 1px solid $color-dark-gray;
+  padding: 4.8rem 7.2rem 0rem 6.4rem;
+
+  h3 {
+    color: $color-dark;
+  }
+
+  @include breakpoint-down(small) {
+    width: 100%;
+    padding-top: 0rem;
+    max-width: 100%;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9.1rem;
+
+  label {
+    position: relative;
+
+    img {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    input {
+      border: none;
+      height: 2.4rem;
+      width: 10rem;
+      outline: 0;
+      padding-left: 4rem;
+
+      &::placeholder {
+        color: $text-light;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  button {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    box-shadow: -5px 25px 39px 12px rgba(227, 230, 236, 0.47);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    & > div {
+      position: absolute;
+      top: 0;
+      right: -1rem;
+    }
+  }
+
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.earnings {
+  align-items: center;
+  border-radius: 2.4rem;
+  box-shadow: -5px 25px 39px 12px rgba(227, 230, 236, 0.47);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 3.2rem 3.2rem 6.4rem;
+  margin-bottom: 7rem;
+  width: 100%;
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 7.2rem;
+    font-weight: 600;
+    color: $color-primary;
+    font-family: "Poppins", sans-serif;
+  }
+
+  span {
+    text-align: center;
+    font-size: 1.4rem;
+    color: $text-light;
+    margin-bottom: 0.3rem;
+  }
+
+  button {
+    border-radius: 1.6rem;
+    box-shadow: -5px 25px 39px 12px rgba(227, 230, 236, 0.47);
+    color: $text-link;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1.8rem 4.3rem;
+  }
+}
+
+.impressions {
+  h3 {
+    margin-bottom: 6.4rem;
+  }
 }

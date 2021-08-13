@@ -1,22 +1,27 @@
-@import "../../styles/variables.scss";
+@import "../../styles/base.scss";
 
 .home {
   color: $color-dark;
-  padding: 4.8rem 6.4rem 4.4rem;
+  margin: 4.8rem 6.4rem 4.4rem;
+  max-width: 62.8rem;
 
-  header {
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 4.8rem;
+  @include breakpoint-down(small) {
+    margin-top: 2.4rem;
+  }
+}
 
-    p {
-      font-weight: 500;
-      font-size: 2.4rem;
-    }
+.header {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 4.8rem;
 
-    h1 {
-      font-size: 600;
-      font-size: 4.8rem;
-    }
+  p {
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  h1 {
+    font-size: 600;
+    font-size: 4.8rem;
   }
 }
 
@@ -28,43 +33,71 @@
   margin-bottom: 4rem;
   padding: 4.3rem 3.2rem 3.2rem;
   width: 100%;
+  position: relative;
 
   & > div {
     flex: 1;
+
+    &:last-child {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 3.4rem;
+    }
   }
 
-  & > div:last-child {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
+  @include breakpoint-down(small) {
+    flex-direction: column-reverse;
+    padding-bottom: 5.4rem;
+
+    h2,
+    p {
+      text-align: center;
+    }
+
+    & > div {
+      &:last-child {
+        margin-bottom: 3.2rem;
+      }
+    }
   }
-} 
+}
 
 .heroContent {
   margin-right: 3.6rem;
-  color: #FFFFFF;
+  color: #ffffff;
 
   h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 2.4rem;
     margin-bottom: 1.4rem;
   }
 
-  p{
+  p {
     font-size: 1.4rem;
     line-height: 2.4rem;
     margin-bottom: 1.4rem;
+    width: 19.1rem;
+
+    @include breakpoint-down(small) {
+      width: 100%;
+    }
   }
 
   button {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 1.6rem;
     color: $color-dark;
     font-size: 1.4rem;
     font-weight: 600;
     height: 5.6rem;
     width: 16rem;
+
+    @include breakpoint-down(small) {
+      display: block;
+      margin: auto;
+    }
   }
 }
 
@@ -73,45 +106,74 @@
   gap: 3.2rem;
 
   > div {
-    flex: 1;
     border-radius: 2.4rem;
+    flex: 1;
 
     &:first-child {
       box-shadow: -5px 25px 39px 12px rgba(227, 230, 236, 0.47);
       height: 39.8rem;
-      padding: 3.2rem 3.2rem 0rem;
+      padding: 3.2rem 3.2rem 6.2rem;
     }
 
     &:last-child {
       background-color: $color-purple-light;
-      padding: 3.2rem .8rem .8rem;
+      padding: 3.2rem 0.8rem 0.8rem;
     }
 
     h3 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      font-size: 1.8rem;
       margin-bottom: 3.2rem;
       margin-left: 2.4rem;
     }
   }
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+  }
 }
 
 .chart {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 0rem 0rem 2.4rem 2.4rem;
   border-radius: 1.6rem;
 
   img {
     margin-bottom: 1.8rem;
+    width: 100%;
   }
 
   button {
     font-weight: 700;
     font-size: 1.4rem;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: $color-primary;
     padding: 1.8rem 7.2rem;
     border-radius: 1.6rem;
+  }
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  span {
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: #ffffff;
+
+    &.current {
+      width: 0.6rem;
+      height: 0.6rem;
+      border: 0.2rem solid $color-blue-light;
+    }
+  }
+
+  @include breakpoint-down(small) {
+    position: absolute;
+    bottom: 2.2rem;
+    left: 50%;
+    transform: translateX(-75%);
   }
 }

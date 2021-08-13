@@ -1,0 +1,33 @@
+$text-light: hsla(236, 7%, 54%, 1);
+$color-primary: hsla(248, 57%, 60%, 1);
+$color-dark-gray: hsla(0, 0%, 89%, 1);
+$color-dark: hsla(234, 45%, 12%, 1);
+$orange: hsla(14, 100%, 65%, 1);
+$color-purple-light: rgba(255, 235, 246, 1);
+$text-link: hsla(231, 81%, 65%, 1);
+$color-blue-light: hsla(193, 60%, 77%, 1);
+
+$breakpoints-up: (
+  "medium": "768px",
+  "large": "1024px",
+  "xlarge": "1400px",
+);
+
+$breakpoints-down: (
+  "xsmall": "450px",
+  "small": "767px",
+  "medium": "1023px",
+  "large": "1399px",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

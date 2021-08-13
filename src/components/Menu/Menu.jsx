@@ -9,6 +9,7 @@ import settings from "../../assets/icons/settings.svg";
 import message from "../../assets/icons/message.svg";
 import notification from "../../assets/icons/notification.svg";
 import chat from "../../assets/icons/chat.svg";
+import search from "../../assets/icons/search.svg";
 
 import styles from "./Menu.module.scss";
 import NavItem from "../NavItem/NavItem";
@@ -35,6 +36,11 @@ function Menu() {
     <aside className={styles.menu}>
       <img src={logo} alt="Unity" />
 
+      <label className={styles.searchInput}>
+          <img src={search} alt="search" />
+          <input type="search" name="search" placeholder='Search' id="search" />
+        </label>
+
       <nav className={styles.navbar}>
         <h4>Admin tools</h4>
         <ul>
@@ -48,7 +54,7 @@ function Menu() {
         <h4>Insights</h4>
         <ul>
           {updateLinks.map((props, i) => (
-            <NavItem key={i} {...props} />
+            <NavItem key={i} {...props} className="truncate" />
           ))}
         </ul>
       </div>

@@ -1,0 +1,11 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Bento 3D Kit",
+      "background": "#FFA2C0",
+      "type": "Illustration",
+      "image": "/images/image1.png"
+    }
+  ]
+}
